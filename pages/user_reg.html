@@ -85,6 +85,14 @@
             telError.textContent("");
             else telError.textContent = "tel is Incorrect";
         });
+        const pwd = document.querySelector('#pwd');
+        const pwdError = document.querySelector('.pwd-error');
+        pwd.addEventListener('input', function(){
+            let pwdRegex = RegExp('[A-Za-Z]{8,}');
+            if(pwdRegex.test(pwd.value)) 
+            pwdError.textContent("");
+            else pwdError.textContent = "password is Incorrect";
+        });
     </script>
 </body>
 </html>
